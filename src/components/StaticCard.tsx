@@ -2,6 +2,7 @@
 "use client";
 
 import { Arapey, Allura } from "next/font/google";
+import Image from "next/image";
 
 // Re-import your fonts
 const arapeyItalic = Arapey({
@@ -19,7 +20,7 @@ export default function StaticCard() {
     <div
       className="
         relative
-        w-[280px] xs:w-[320px] sm:w-[380px] md:w-[420px] lg:w-[450px] xl:w-[480px]
+        w-[90vw] max-w-[480px] sm:w-[380px] md:w-[420px] lg:w-[450px] xl:w-[480px]
         aspect-[502/703]
         bg-[url('/card_small.png')] bg-cover bg-center
         filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.3)] sm:drop-shadow-[0_20px_35px_rgba(0,0,0,0.4)]
@@ -29,11 +30,12 @@ export default function StaticCard() {
       "
     >
       {/* Circular couple image */}
-      <div className="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[#4E194B]">
-        <img
-          src="/Anna_Sahaj_Cartoon.jpg"
-          alt="Anna and Sahaj"
-          className="w-full h-full object-cover"
+      <div className="relative w-36 h-36 rounded-full overflow-hidden border-4 border-[#4E194B]">
+        <Image
+            src="/Anna_Sahaj_Cartoon.jpg"
+            alt="Anna & Sahaj"
+            fill
+            className="object-cover"
         />
       </div>
 
