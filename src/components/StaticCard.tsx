@@ -20,7 +20,7 @@ export default function StaticCard() {
     <div
       className="
         relative
-        w-[90vw] max-w-[480px] sm:w-[380px] md:w-[420px] lg:w-[450px] xl:w-[480px]
+        w-full max-w-[480px]
         aspect-[502/703]
         bg-[url('/card_small.png')] bg-cover bg-center
         filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.3)] sm:drop-shadow-[0_20px_35px_rgba(0,0,0,0.4)]
