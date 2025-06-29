@@ -117,7 +117,8 @@ export default function StaticCard() {
           m-0
         `}
       >
-        27th &amp; 28th December, 2025
+        {/* 27th &amp;  */}
+        28th December, 2025
       </p>
       <p
         className={`

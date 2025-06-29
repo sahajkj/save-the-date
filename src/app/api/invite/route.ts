@@ -10,10 +10,10 @@ export async function GET() {
   });
 
   cal.createEvent({
-    start: new Date(Date.UTC(2025, 11, 27)),   // Dec 27, 2025 (all-day)
+    start: new Date(Date.UTC(2025, 11, 28)),   // Dec 28, 2025 (all-day)
     end:   new Date(Date.UTC(2025, 11, 29)),   // through Dec 28
     summary: "Anna & Sahaj Wedding Celebration",
-    description: "Join us in Bengaluru, India for our wedding on December 27–28, 2025!",
+    description: "Join us in Bengaluru, India for our wedding on December 28, 2025!",
     location: "Bengaluru, India",
     allDay: true,
     organizer: {

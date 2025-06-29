@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Save The Date",
   description: "Anna & Sahaj Wedding Celebration",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png"  
+},
 };
 
 export default function RootLayout({
