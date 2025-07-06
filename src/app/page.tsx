@@ -1,6 +1,6 @@
 "use client";
-import SaveTheDatePage from './save-the-date/page';
+import WeddingSaveTheDatePage from './wedding-save-the-date/page';
 
 export default function Home() {
-    return <SaveTheDatePage />;
+    return <WeddingSaveTheDatePage />;
 }

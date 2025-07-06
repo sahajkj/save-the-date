@@ -14,8 +14,17 @@ const allura = Allura({
   subsets: ["latin"],
   weight: ["400"],
 });
+type StaticCardProps = {
+  dates?: string;
+  location?: string;
+  inviteUrl?: string;
+};
 
-export default function StaticCard() {
+export default function StaticCard({
+  dates = "28th December, 2025",
+  location = "Bengaluru, India",
+  inviteUrl = "/api/wedding-invite",
+}: StaticCardProps) {
   return (
     <div
       className="
@@ -118,7 +127,7 @@ export default function StaticCard() {
         `}
       >
         {/* 27th &amp;  */}
-        28th December, 2025
+        {dates}
       </p>
       <p
         className={`
@@ -129,7 +138,7 @@ export default function StaticCard() {
           m-0
         `}
       >
-        Bengaluru, India
+        {location}
       </p>
 
       {/* Add to Calendar Button */}
@@ -143,7 +152,7 @@ export default function StaticCard() {
           transition-colors duration-200
           text-sm sm:text-base md:text-lg
         "
-        onClick={() => window.location.href = "/api/invite"}
+        onClick={() => window.location.href = inviteUrl}
       >
         Add to Calendar
       </button>
