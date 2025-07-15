@@ -1,8 +1,6 @@
-// src/components/StaticCard.tsx
-"use client";
-
 import { Arapey, Allura } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 // Re-import your fonts
 const arapeyItalic = Arapey({
@@ -41,10 +39,10 @@ export default function StaticCard({
       {/* Circular couple image */}
       <div className="relative w-36 h-36 rounded-full overflow-hidden border-4 border-[#4E194B]">
         <Image
-            src="/Anna_Sahaj_Cartoon.jpg"
-            alt="Anna & Sahaj"
-            fill
-            className="object-cover"
+          src="/Anna_Sahaj_Cartoon.jpg"
+          alt="Anna & Sahaj"
+          fill
+          className="object-cover"
         />
       </div>
 
@@ -52,6 +50,7 @@ export default function StaticCard({
       <div className="mt-2 sm:mt-4 md:mt-6 flex flex-col items-center space-y-1">
         <p
           className={`
+            w-full sm:w-auto text-center
             ${allura.className}
             text-[#4E194B]
             text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl
@@ -62,6 +61,7 @@ export default function StaticCard({
         </p>
         <p
           className={`
+            w-full sm:w-auto text-center
             ${allura.className}
             text-[#4E194B]
             text-2xl xs:text-xl sm:text-2xl md:text-4xl lg:text-5xl
@@ -72,6 +72,7 @@ export default function StaticCard({
         </p>
         <p
           className={`
+            w-full sm:w-auto text-center
             ${allura.className}
             text-[#4E194B]
             text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl
@@ -83,7 +84,7 @@ export default function StaticCard({
       </div>
 
       {/* “SAVE the DATE” in one line */}
-      <h1 className="flex items-baseline justify-center space-x-2 mt-4 sm:mt-6">
+      <h1 className="w-full sm:w-auto flex items-baseline justify-center space-x-2 mt-4 sm:mt-6">
         <span
           className={`
             ${arapeyItalic.className}
@@ -119,6 +120,7 @@ export default function StaticCard({
       {/* Date and Location */}
       <p
         className={`
+          w-full sm:w-auto text-center
           ${arapeyItalic.className}
           text-[#4E194B]
           text-lg sm:text-xl md:text-2xl
@@ -126,11 +128,11 @@ export default function StaticCard({
           m-0
         `}
       >
-        {/* 27th &amp;  */}
         {dates}
       </p>
       <p
         className={`
+          w-full sm:w-auto text-center
           ${allura.className}
           text-[#4E194B]
           text-md sm:text-lg md:text-xl
@@ -142,8 +144,9 @@ export default function StaticCard({
       </p>
 
       {/* Add to Calendar Button */}
-      <button
-        className="
+      <Link
+        href={inviteUrl}
+        className={`
           mt-4
           bg-[#4E194B] text-white
           py-2 px-4
@@ -151,11 +154,25 @@ export default function StaticCard({
           hover:bg-[#693972]
           transition-colors duration-200
           text-sm sm:text-base md:text-lg
-        "
-        onClick={() => window.location.href = inviteUrl}
+          ${arapeyItalic.className}
+        `}
       >
         Add to Calendar
-      </button>
+      </Link>
+
+      {/* Invitation to follow */}
+      <p
+        className={`
+          w-full sm:w-auto text-center
+          ${arapeyItalic.className}
+          text-[#4E194B]
+          text-md sm:text-base md:text-lg
+          mt-2
+          m-0
+        `}
+      >
+        Invitation to follow
+      </p>
     </div>
   );
 }
